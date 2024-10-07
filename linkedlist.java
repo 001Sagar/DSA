@@ -111,8 +111,8 @@ public class linkedlist {
             return newNode;
         }
         int count = 0;
-        while(temp != null){
-            if(count == pos-1){
+        while (temp != null) {
+            if (count == pos - 1) {
                 newNode.next = temp.next;
                 temp.next = newNode;
                 return head;
@@ -142,10 +142,41 @@ public class linkedlist {
         return head;
     }
 
+    public static Node twosum(Node head1, Node head2) {
+
+        Node temp1 = head1, temp2 = head2;
+        Node dummy = new Node(-1);
+        int carry = 0;
+        while (temp1 != null && temp2 != null) {
+            int sum = temp1.data + temp2.data + carry;
+            dummy.next = new Node(sum);
+            carry = temp1.data + temp2.data < 10 ? 0 : sum / 10;
+
+            temp1 = temp1.next;
+            temp2 = temp2.next;
+        }
+        return dummy;
+    }
+
+    public static int sumOfNodes(Node head) {
+        if (head == null) {
+            return 0;
+        }
+        Node temp = head;
+        int sum = 0;
+        while (temp != null) {
+            sum += temp.data;
+            temp = temp.next;
+        }
+
+        return sum;
+    }
+
     public static void main(String[] args) {
         // Take a Input LinkedList
-        Node head = takeInput();
-        print(head);
+        // Node head1 = takeInput();
+        // Node head2 = takeInput();
+        // print(head);
         // Print the length of the linkedlist
         // int length = length(head);
         // System.out.println("The Length of the LinkedList " + length);
@@ -161,7 +192,14 @@ public class linkedlist {
         // check the LinkedList is Palindrom or not
         // System.out.println("The List is Palindrom " + ispalindrom(head));
 
-        Node inerted = insertNode(head, 3, 30);
-        print(inerted);
+        // Node inerted = insertNode(head, 3, 30);
+        // print(inerted);
+
+        // Node ans = twosum(head1, head2);
+
+        // print(ans);
+
+        Node head = takeInput();
+        System.err.println("The Sum of the Node : " + sumOfNodes(head));
     }
 }
