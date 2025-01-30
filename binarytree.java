@@ -74,7 +74,6 @@ public class binarytree {
         if (root == null) {
             return 0;
         }
-        ;
 
         int left = sumofNodes(root.left);
         int right = sumofNodes(root.right);
@@ -176,25 +175,27 @@ public class binarytree {
         BinaryTree root = takeInput(true, 0, false);
         print(root);
 
-        System.out.println("Number of Nodes in Tree " + numNodes(root));
-        System.out.println("The Sum of Nodes in Tree " + sumofNodes(root));
 
-        // Print the Tree in PreOrder Traversal
-        preOrder(root);
-        System.out.println();
-        // Print The Tree in Postorder Traversal
-        postOrder(root);
-        System.out.println();
-        // Print the Tree in inOder Traversal
-        inOrder(root);
-        System.out.println();
-        // The Largest Node in the Tree
-        System.out.println("The Node with largest data is " + largest(root));
-        // count of Nodes greater than X
-        System.out.println("Number of Nodes greater than X " + countNodeGreaterThanX(root, 45));
-        // Height of the Tree
-        System.out.println("The Height of the Tree "+ height(root));
-        // Number of leaf Nodes
+
+        // System.out.println("Number of Nodes in Tree " + numNodes(root));
+        // System.out.println("The Sum of Nodes in Tree " + sumofNodes(root));
+
+        // // Print the Tree in PreOrder Traversal
+        // preOrder(root);
+        // System.out.println();
+        // // Print The Tree in Postorder Traversal
+        // postOrder(root);
+        // System.out.println();
+        // // Print the Tree in inOder Traversal
+        // inOrder(root);
+        // System.out.println();
+        // // The Largest Node in the Tree
+        // System.out.println("The Node with largest data is " + largest(root));
+        // // count of Nodes greater than X
+        // System.out.println("Number of Nodes greater than X " + countNodeGreaterThanX(root, 45));
+        // // Height of the Tree
+        // System.out.println("The Height of the Tree "+ height(root));
+        // // Number of leaf Nodes
         
     }
 }
